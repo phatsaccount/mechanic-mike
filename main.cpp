@@ -74,6 +74,7 @@ bool InitData()
         g_get_hit = Mix_LoadWAV("sound//get_hit.wav");
         g_lose_game = Mix_LoadWAV("sound//lose_game.wav");
         g_win_game = Mix_LoadWAV("sound//win_game.wav");
+        
 
         if( g_sound_shoot == NULL || 
         g_sound_jump == NULL || 
@@ -134,7 +135,7 @@ std::vector<ThreatsObject*> MakeThreatList()
             jumb_threat->set_clip();
             jumb_threat->set_type_move(ThreatsObject::JUMB_THREAT);
             srand(time(NULL));
-            jumb_threat->set_x_pos(500 + i*600);
+            jumb_threat->set_x_pos(1000 + i*600);
             jumb_threat->set_y_pos(-100);
             list_threats.push_back(jumb_threat);
         }
@@ -189,7 +190,7 @@ std::vector<ThreatsObject*> MakeThreatList()
             bee_threat->set_type_move(ThreatsObject::FLY_THREAT);
             srand(time(NULL));
             bee_threat->set_x_pos(1000 + i*3600);
-            bee_threat->set_y_pos(200);
+            bee_threat->set_y_pos(100);
 
             int pos1 = bee_threat->get_x_pos() - 60;
             int pos2 = bee_threat->get_x_pos() + 60;
@@ -209,8 +210,8 @@ std::vector<ThreatsObject*> MakeThreatList()
             p_threat->LoadImg("img//redpig.png",g_screen);
             p_threat->set_clip();
             p_threat->set_type_move(ThreatsObject::MOVE_IN_SPACE_THREAT);
-            p_threat->set_x_pos(200 + i*2500);
-            p_threat->set_y_pos(200);
+            p_threat->set_x_pos(800 + i*2500);
+            p_threat->set_y_pos(100);
 
             int pos1 = p_threat->get_x_pos() - 60;
             int pos2 = p_threat->get_x_pos() + 60;
@@ -230,8 +231,8 @@ std::vector<ThreatsObject*> MakeThreatList()
         {
             p_threat->LoadImg("img//plant.png",g_screen);
             p_threat->set_clip();
-            p_threat->set_x_pos(700 + i*1500);//vi tri quai
-            p_threat->set_y_pos(250);
+            p_threat->set_x_pos(800 + i*1500);//vi tri quai
+            p_threat->set_y_pos(100);
             p_threat->set_type_move(ThreatsObject::STATIC_THREAT);
             p_threat->Set_input_left(0);
 

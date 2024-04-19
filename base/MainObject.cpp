@@ -341,7 +341,7 @@ void MainObject::CheckToMap(Map& map_data) //xu li va cham
     int y1 = 0;
     int y2 = 0;
 
-
+    g_coin = Mix_LoadWAV("sound//coin.wav");
     //Check hoz
 
     int height_min = height_frame_ < TILE_SIZE ? height_frame_ : TILE_SIZE;
@@ -368,6 +368,7 @@ void MainObject::CheckToMap(Map& map_data) //xu li va cham
                 map_data.tile[y2][x2] = 0;
                 if(val1 == 0 || val2 == 0)
                 {
+                    Mix_PlayChannel(-1,g_coin,0);
                     IncreaseMoney();
                 }
                 
@@ -397,7 +398,7 @@ void MainObject::CheckToMap(Map& map_data) //xu li va cham
                 map_data.tile[y1][x1] = 0;
                 map_data.tile[y2][x1] = 0;
                 
-                
+                Mix_PlayChannel(-1,g_coin,0);
                     IncreaseMoney();
                 
             }
@@ -434,7 +435,7 @@ void MainObject::CheckToMap(Map& map_data) //xu li va cham
             {
                 map_data.tile[y2][x1] = 0;
                 map_data.tile[y2][x2] = 0;
-                
+                Mix_PlayChannel(-1,g_coin,0);
                     IncreaseMoney();
                 
             }
@@ -471,7 +472,7 @@ void MainObject::CheckToMap(Map& map_data) //xu li va cham
             {
                 map_data.tile[y1][x1] = 0;
                 map_data.tile[y1][x2] = 0;
-                
+                Mix_PlayChannel(-1,g_coin,0);
                     IncreaseMoney();
                 
             }

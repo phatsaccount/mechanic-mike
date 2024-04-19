@@ -380,14 +380,12 @@ void ThreatsObject::ImpMoveType(SDL_Renderer* screen, Map& map_data)
                 input_type.right_ = 0;
                 LoadImg("img//redpig.png",screen);
             }
-            else if(x_pos_ < animation_a_ || check_left == 1)
+            else if(x_pos_ < animation_a_ || check_left == 1 || x_pos_ <= 0)
             {
                 input_type.left_ = 0;
                 input_type.right_ = 1;
                 LoadImg("img//redpig_right.png",screen);
             }
-            
-            
             
         }else
             {

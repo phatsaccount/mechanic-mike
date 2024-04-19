@@ -36,6 +36,7 @@ static Mix_Chunk* g_lose_game;
 static Mix_Chunk* g_win_game;
 static Mix_Chunk* g_hit;
 static Mix_Chunk* g_get_hit;
+static Mix_Chunk* g_coin;
 //Map
 #define TILE_SIZE 64
 #define MAP_MAX_X 400
