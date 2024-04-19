@@ -762,7 +762,7 @@ int main(int argc, char* args[]){
             }
             best_score.SetText(strb_score);
 			best_score.LoadFromRenderText(font_time, g_screen);
-			best_score.RenderText(g_screen, 0 , 120);
+			best_score.RenderText(g_screen, 40 , 120);
             std::ofstream outfile("highscore.txt");
             outfile << bscore;
             outfile.close();
