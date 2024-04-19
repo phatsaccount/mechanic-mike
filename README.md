@@ -9,4 +9,4 @@
   3.game có đa dạng nhiều loại quái vật mà bạn có thể tha hồ khám phá  mỗi con quái vật đều có hình ảnh, cách thức di chuyển ,cách thức tấn công riêng biệt làm cho game đầy hấp dẫn.
   4.game có cơ chế tấn công độc đáo , có thể kết hợp để vượt qua những thử thách.
   5.game dễ làm quen và tiếp cận , có hướng dẫn cách thức di chuyển và tấn công
-  5.gameplay không một chiều, cần có chút sáng tạo và chiến thuật để giúp game có thể hoàn thành trong thời gian ngắn nhất
+  6.gameplay không một chiều, cần có chút sáng tạo và chiến thuật để giúp game có thể hoàn thành trong thời gian ngắn nhất
