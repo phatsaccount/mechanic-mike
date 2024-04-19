@@ -1,12 +1,14 @@
- -Nguyễn Ngọc Phát 23020131
- -Đây là  một  game thuộc thể loại flatform được lấy cảm  hứng từ tựa game mario đình đám. Bạn nhập vai vào một anh chàng có chiếc mũ màu đỏ với một khẩu súng có thể bắng xuyên tường.
- vượt qua gian nan thử thách để tiêu diệt tên tội phạm đang bị truy nã và đem về hòa bình cho thế giới
- -Em nhận thấy  bài tập làm game này của em xứng đáng được 8.5 điểm.
- -game này đã được em bắt đầu tiến hành tìm hiểu và phát triển kể từ khi nhận được bài tập lớn. Có những code em đã tham khảo nhưng đã có tìm hiểu  và chỉnh sửa để cho phù hợp với
- định hướng game mà em hướng tới. Ngoài ra game còn có những tính năng , thuật toán do em tự viết để tạo ra một lối chơi độc đáo , đầy thú vị mà không gây nhàm chán. Dưới đây là  những   điều nổi bật
-  1.game đã có sử dụng nhiều đồ họa nhân vật , kết hợp với một tông màu chủ đạo tạo nên một cái nhìn tổng quan về hình ảnh của game rất bắt mắt.
-  2.âm thanh cuốn hút  đa dạng, map được thiết kế để tăng trải nghiệm của người chơi.
-  3.game có đa dạng nhiều loại quái vật mà bạn có thể tha hồ khám phá  mỗi con quái vật đều có hình ảnh, cách thức di chuyển ,cách thức tấn công riêng biệt làm cho game đầy hấp dẫn.
-  4.game có cơ chế tấn công độc đáo , có thể kết hợp để vượt qua những thử thách.
-  5.game dễ làm quen và tiếp cận , có hướng dẫn cách thức di chuyển và tấn công
-  6.gameplay không một chiều, cần có chút sáng tạo và chiến thuật để giúp game có thể hoàn thành trong thời gian ngắn nhất
+
+Giới thiệu về game
+Tên game: Mechanic Mike
+Sinh viên thực hiện: Nguyễn Ngọc Phát - MSSV: 23020131.
+em nhận thấy em có thể được 8.5 điểm cho game này.
+Mechanic Mike là một trò chơi thể loại platformer được lấy cảm hứng từ tựa game kinh điển Mario. Trong trò chơi này, người chơi sẽ nhập vai vào một anh chàng với chiếc mũ màu đỏ và một khẩu súng có thể bắn xuyên tường. Nhiệm vụ của người chơi là vượt qua các thử thách gian nan để tiêu diệt tên tội phạm đang bị truy nã và đem lại hòa bình cho thế giới.
+
+Điểm nổi bật
+Đồ họa bắt mắt: Game sử dụng nhiều đồ họa nhân vật và kết hợp một tông màu chủ đạo để tạo nên một cái nhìn tổng quan về hình ảnh của game rất bắt mắt.
+Âm thanh đa dạng: Game có các hiệu ứng âm thanh cuốn hút và đa dạng, kết hợp với các bản nhạc phù hợp để tăng trải nghiệm cho người chơi.
+Đa dạng loại quái vật: Game có nhiều loại quái vật khác nhau để người chơi khám phá, mỗi con quái vật đều có hình ảnh, cách thức di chuyển và tấn công riêng biệt, làm cho game trở nên đầy hấp dẫn.
+Cơ chế tấn công độc đáo: Game có cơ chế tấn công đặc biệt, người chơi có thể kết hợp các kỹ năng để vượt qua các thử thách.
+Dễ tiếp cận: Game được thiết kế để dễ làm quen và tiếp cận, có hướng dẫn cách thức di chuyển và tấn công.
+Gameplay đa dạng: Gameplay không đơn điệu, người chơi cần có chút sáng tạo và chiến thuật để hoàn thành mỗi màn chơi trong thời gian ngắn nhất.
