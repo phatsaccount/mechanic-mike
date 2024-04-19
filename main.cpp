@@ -260,8 +260,7 @@ int main(int argc, char* args[]){
 
 
     GameMap game_map;
-    game_map.LoadMap("map/map02.dat");
-    game_map.LoadTiles(g_screen);
+    //
 
     MainObject p_player;
     p_player.LoadImg("img//runright.png", g_screen);
@@ -357,6 +356,8 @@ int main(int argc, char* args[]){
 
         while(!menu_quit)
         {
+            game_map.LoadMap("map/map02.dat");
+            game_map.LoadTiles(g_screen);
             
             SDL_RenderClear(g_screen);
             g_menu_screen.Render(g_screen, NULL);
@@ -566,6 +567,10 @@ int main(int argc, char* args[]){
                                     SDL_Delay(7000);
                                     is_quit = true;
                                 }
+                                else if(bCol1)
+                                {
+                                    p_player.set_y_val(-20);
+                                }
                                 else
                                 {
                                     Mix_PlayChannel(-1,g_hit,0);
@@ -580,7 +585,6 @@ int main(int argc, char* args[]){
                                     exp_list.push_back(newExp);
                                     p_threat->Free();
                                     threats_list.erase(threats_list.begin() + i);
-
                                 }
 
                                 

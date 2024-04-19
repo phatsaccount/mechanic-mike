@@ -363,9 +363,14 @@ void MainObject::CheckToMap(Map& map_data) //xu li va cham
 
             if(val1 == STATE_MONEY || val2 == STATE_MONEY)
             {
-                map_data.tile[y1][y2] = 0;
-                map_data.tile[y2][y2] = 0;
-                IncreaseMoney();
+                
+                map_data.tile[y1][x2] = 0;
+                map_data.tile[y2][x2] = 0;
+                if(val1 == 0 || val2 == 0)
+                {
+                    IncreaseMoney();
+                }
+                
             }
             else if(val1 ==HEAD_TILE || val2 == HEAD_TILE)
             {
@@ -388,10 +393,13 @@ void MainObject::CheckToMap(Map& map_data) //xu li va cham
             int val2 = map_data.tile[y2][x1];
 
             if(val1 == STATE_MONEY || val2 == STATE_MONEY)
-            {
-                map_data.tile[y1][y1] = 0;
-                map_data.tile[y2][y1] = 0;
-                IncreaseMoney();
+            {   
+                map_data.tile[y1][x1] = 0;
+                map_data.tile[y2][x1] = 0;
+                
+                
+                    IncreaseMoney();
+                
             }
             else if(val1 ==HEAD_TILE || val2 == HEAD_TILE)
             {
@@ -426,9 +434,11 @@ void MainObject::CheckToMap(Map& map_data) //xu li va cham
             {
                 map_data.tile[y2][x1] = 0;
                 map_data.tile[y2][x2] = 0;
-                IncreaseMoney();
+                
+                    IncreaseMoney();
+                
             }
-            else if(val1 ==HEAD_TILE || val2 == HEAD_TILE)
+            else if(val1 == HEAD_TILE || val2 == HEAD_TILE)
             {
                 hurted = 1;
             }
@@ -460,8 +470,10 @@ void MainObject::CheckToMap(Map& map_data) //xu li va cham
                 if(val1 == STATE_MONEY || val2 == STATE_MONEY)
             {
                 map_data.tile[y1][x1] = 0;
-               map_data.tile[y1][x2] = 0;
-                IncreaseMoney();
+                map_data.tile[y1][x2] = 0;
+                
+                    IncreaseMoney();
+                
             }
             else if(val1 ==HEAD_TILE || val2 == HEAD_TILE)
             {
