@@ -1,7 +1,7 @@
 #Giới thiệu về game
 #Tên game: Mechanic Mike
 #Sinh viên thực hiện: Nguyễn Ngọc Phát - MSSV: 23020131.
-em nhận thấy em có thể được 8.5 điểm cho game này.
+em nhận thấy em có thể được 9 điểm cho game này.
 #Mechanic Mike là một trò chơi thể loại platformer được lấy cảm hứng từ tựa game kinh điển Mario. Trong trò chơi này, người chơi sẽ nhập vai vào một anh chàng với chiếc mũ màu đỏ và một khẩu súng có thể bắn xuyên tường. Nhiệm vụ của người chơi là vượt qua các thử thách gian nan để tiêu diệt tên tội phạm đang bị truy nã và đem lại hòa bình cho thế giới.
 
 #Điểm nổi bật
