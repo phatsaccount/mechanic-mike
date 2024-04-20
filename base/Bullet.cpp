@@ -12,7 +12,7 @@ BulletObject::~BulletObject()
 {
     
 }
-
+//load anh cho dan
 bool BulletObject::LoadImgBullet(SDL_Renderer* des)
 {
     bool ret = false;
@@ -27,8 +27,9 @@ bool BulletObject::LoadImgBullet(SDL_Renderer* des)
     return ret;
 }
 
+//xet huong bay cua dan
 void BulletObject::HandleMove(const int& x_border, const int& y_border)
-{
+{   //di qua ben phai man hinh
     if(bullet_dir_ == DIR_RIGHT)
     {
         rect_.x += x_val_;
@@ -37,7 +38,7 @@ void BulletObject::HandleMove(const int& x_border, const int& y_border)
         {
             is_move_ = false;
         }
-    }
+    }//di qua ben trai man hinh
     else if(bullet_dir_ == DIR_LEFT)
     {
         rect_.x -= x_val_;

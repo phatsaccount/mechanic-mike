@@ -4,15 +4,15 @@
 //ham check va cham(check theo hinh chu nhat)
 bool SDLBasefuction::CheckColli(const SDL_Rect& object1, const SDL_Rect& object2)
 {
-    return (object1.x < object2.x + object2.w &&
-            object1.x + object1.w > object2.x &&
-            object1.y < object2.y + object2.h &&
-            object1.y + object1.h > object2.y);
+    return (object1.x < object2.x + object2.w &&//ben trai 2
+            object1.x + object1.w > object2.x &&//ben phai 2
+            object1.y < object2.y + object2.h &&//ben tren 2
+            object1.y + object1.h > object2.y);//ben duoi 2
 }
 //kiem tra vi tri cua chuot so voi nut
 bool SDLBasefuction::CheckMousePos(const int& x,const int& y,const SDL_Rect& Obj_)
 {
-	return (x >= Obj_.x && x <= Obj_.x + Obj_.w && y>= Obj_.y && y <= Obj_.y + Obj_.h);
+	return (x >= Obj_.x && x <= Obj_.x + Obj_.w && y>= Obj_.y && y <= Obj_.y + Obj_.h);//ben trong 4 goc cua nut
 }
 
 // ham menu giua game
@@ -141,7 +141,7 @@ bool SDLBasefuction::Menu(SDL_Renderer* g_screen)
                 Help_Button[0].Render(g_screen);
             }
 
-            if(help == 1 )
+            if(help == 1)
             {
               Help.Render(g_screen);
               if(SDLBasefuction::CheckMousePos(MousePosX,MousePosY,Back_Button2[0].GetRect()) == true)

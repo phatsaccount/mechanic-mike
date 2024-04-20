@@ -1,4 +1,6 @@
 #include "game_map.h"
+
+//load thong tin tu file name vao tile
 void GameMap::LoadMap(std::string name) // Load map data from file
 {
     std::ifstream file(name);
@@ -17,6 +19,7 @@ void GameMap::LoadMap(std::string name) // Load map data from file
             int val = game_map_.tile[i][j];
             if (val > 0)
             {
+                // thiet lap max x va max y
                 if (j > game_map_.max_x_)
                 {
                     game_map_.max_x_ = j;
@@ -29,6 +32,7 @@ void GameMap::LoadMap(std::string name) // Load map data from file
             }
         }
     }
+    //chuyen ve dang pixel , cong them mot de cho map to hon map goc, khi load len man hinh se k bi thieu anh 
     game_map_.max_x_ = (game_map_.max_x_ + 1) * TILE_SIZE;
     game_map_.max_y_ = (game_map_.max_y_ + 1) * TILE_SIZE;
 
@@ -37,7 +41,7 @@ void GameMap::LoadMap(std::string name) // Load map data from file
 
     file.close();
 }
-
+//nhap du lieu anh cho tung o
 void GameMap::LoadTiles(SDL_Renderer *screen)  //load map to texture
 {
     char file_img[30];
@@ -57,9 +61,10 @@ void GameMap::LoadTiles(SDL_Renderer *screen)  //load map to texture
         tile_mat[i].LoadImg(file_img, screen);
     }
 }
-
+//ve len man hinh
 void GameMap::DrawMap(SDL_Renderer *screen) // Render map
 {
+    // vi tri  de load anh
     int x1 = 0;
     int x2 = 0;
 

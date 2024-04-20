@@ -39,7 +39,7 @@ SDL_Rect MainObject::GetRectFrame()
     rect.h = height_frame_;
     return rect;
 }
-
+//load anhcho charactor
 bool MainObject::LoadImg(std::string path, SDL_Renderer* screen)
 {
     bool ret = BaseObject::LoadImg(path, screen);
@@ -50,7 +50,7 @@ bool MainObject::LoadImg(std::string path, SDL_Renderer* screen)
     }
     return ret;
 }
-
+//set frame cho nhan vat
 void MainObject::set_clips() //frame
 {
     if(width_frame_ > 0 && height_frame_ >0)

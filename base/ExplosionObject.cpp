@@ -10,6 +10,7 @@ ExplosionObject::~ExplosionObject()
 {
 
 }
+// bien anh path thanh texture va xet frame
 bool ExplosionObject::LoadImg(std::string path, SDL_Renderer* screen)
 {
     bool ret = BaseObject::LoadImg(path, screen);
@@ -21,6 +22,7 @@ bool ExplosionObject::LoadImg(std::string path, SDL_Renderer* screen)
     return ret;
     
 }
+//thiet lap cac khung hinh va xet thong so
 void ExplosionObject::set_clips()
 {
     if(frame_width_ > 0 && frame_height_ > 0)
@@ -34,7 +36,7 @@ void ExplosionObject::set_clips()
         }
     }
 }
-
+//hien thi vu no
 void ExplosionObject::Show(SDL_Renderer* screen)
 {
     SDL_Rect* current_clip = &frame_clip_[frame_];

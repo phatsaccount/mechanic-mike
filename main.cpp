@@ -4,7 +4,6 @@
 #include "base/ImpTimer.h"
 #include "base/ThreatsObject.h"
 #include "base/ExplosionObject.h"
-#include "base/DeathAnimation.h"
 #include "base/TextObject.h"
 #include "base/PlayerPower.h"
 
@@ -142,7 +141,7 @@ std::vector<ThreatsObject*> MakeThreatList()
     }
 
     ThreatsObject* fall_dyna_threats = new ThreatsObject[20];
-    for(int i = 0 ; i < 20 ; i++)
+    for(int i = 0 ; i < 16 ; i++)
     {
         ThreatsObject* fall_threat = (fall_dyna_threats + i);//
         if(fall_threat != NULL)
@@ -151,7 +150,7 @@ std::vector<ThreatsObject*> MakeThreatList()
             fall_threat->set_clip();
             fall_threat->set_type_move(ThreatsObject::FALL_THREAT);
             srand(time(NULL));
-            fall_threat->set_x_pos(4500 + i*600);
+            fall_threat->set_x_pos(4000 + i*600);
             fall_threat->set_y_pos(20);
             list_threats.push_back(fall_threat);
         }
@@ -252,7 +251,7 @@ std::vector<ThreatsObject*> MakeThreatList()
 int main(int argc, char* args[]){
 
     bool real_quit = false;
-    std::vector<LoadAnimation*> exp_list;
+    
 
     ImpTimer fps_timer;
 
@@ -278,7 +277,7 @@ int main(int argc, char* args[]){
     bullet.Init(g_screen, "img//bullet.png");
     bullet.Set_Pos(SCREEN_WIDTH*0.5 - 600, 80);
 
-    //std::vector<ThreatsObject*> threats_list = MakeThreatList();
+    
     
     ExplosionObject exp_threat;
     bool t_ret = exp_threat.LoadImg("img//disappear.png",g_screen);
@@ -288,12 +287,7 @@ int main(int argc, char* args[]){
 
     
 
-    //text
-    // TextObject time_game;
-    // time_game.SetColor(TextObject::BLACK_TEXT);
-    // TextObject mark_game;
-    // mark_game.SetColor(TextObject::BLACK_TEXT);
-    // UINT mark_value = 0;
+    
 // diem cao nhat
     TextObject best_score;
     best_score.SetColor(TextObject::BLACK_TEXT);
@@ -529,14 +523,7 @@ int main(int argc, char* args[]){
                                 {
                                     
                                     pt_bullet->set_is_move(false);
-                                    //break;
-                                    LoadAnimation* newExp = new LoadAnimation();
-                                    newExp->LoadImg("img//disappear.png",g_screen);
-                                    newExp->set_clips();
-                                    newExp->set_x_pos(p_player.get_x_pos());
-                                    newExp->set_y_pos(p_player.get_y_pos());
-                                    exp_list.push_back(newExp);
-                                    //
+                                    
                                 }
                         }
 
@@ -557,12 +544,13 @@ int main(int argc, char* args[]){
                             {
                                 if(p_threat->get_type_move() == ThreatsObject::WIN)
                                 {
-                                    g_lose_screen.LoadImg("img//winn.png",g_screen);
-                                    g_lose_screen.Render(g_screen);
+                                    g_win_screen.LoadImg("img//winn.png",g_screen);
+                                    g_win_screen.Render(g_screen);
                                     SDL_RenderPresent(g_screen);
                                     g_lose_screen.Free();
                                     win_game = true;
                                     Mix_HaltChannel(1);
+                                    Mix_FreeChunk(g_back_sound);
                                     Mix_PlayChannel(-1 ,g_win_game, 0);
                                     //fps_timer.paused();
                                     SDL_Delay(7000);
@@ -578,12 +566,7 @@ int main(int argc, char* args[]){
                                     p_player.IncreaseBullet();
                                     p_player.IncreaseMoney();
                                     p_player.set_y_val(-20);
-                                    LoadAnimation* newExp = new LoadAnimation();
-                                    newExp->LoadImg("img//disappear.png",g_screen);
-                                    newExp->set_clips();
-                                    newExp->set_x_pos(p_player.get_x_pos());
-                                    newExp->set_y_pos(p_player.get_y_pos());
-                                    exp_list.push_back(newExp);
+                                    
                                     p_threat->Free();
                                     threats_list.erase(threats_list.begin() + i);
                                 }
@@ -683,10 +666,10 @@ int main(int argc, char* args[]){
 
                                 if(obj_threat->get_type_move() == ThreatsObject::WIN)
                                 {
-                                    g_lose_screen.LoadImg("img//winn.png",g_screen);
-                                    g_lose_screen.Render(g_screen);
+                                    g_win_screen.LoadImg("img//winn.png",g_screen);
+                                    g_win_screen.Render(g_screen);
                                     SDL_RenderPresent(g_screen);
-                                    g_lose_screen.Free();
+                                    g_win_screen.Free();
                                     win_game = true;
                                     Mix_HaltChannel(1);
                                     Mix_PlayChannel(-1 ,g_win_game, 0);
@@ -715,20 +698,7 @@ int main(int argc, char* args[]){
                 }
             }
 
-            for(int k = 0; k < exp_list.size();k++ )
-            {
-                LoadAnimation* new_exp = exp_list.at(k);
-                if(new_exp!= NULL)
-                {
-                    new_exp->SetMapXY(map_data.start_x_,map_data.start_y_);
-                    new_exp->Show(g_screen);
-                    if(new_exp->get_animation_loop() > 0 )
-                    {
-                        new_exp->Free();
-                        exp_list.erase(exp_list.begin() + k);
-                    }
-                }
-            }
+            
 
             int money_count = p_player.GetMoney();
             std::string money_str = std::to_string(money_count);
